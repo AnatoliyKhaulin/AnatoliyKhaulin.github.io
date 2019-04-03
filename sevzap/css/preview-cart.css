@@ -1,0 +1,25 @@
+.preview-cart {
+
+}
+
+.preview-cart__remark {
+    display: inline-flex;
+    align-items: flex-start;
+    vertical-align: top;
+    text-decoration: none;
+    color: inherit;
+}
+
+.preview-cart__remark::before {
+    content: "";
+    display: block;
+    width: 3.3rem;
+    min-width: 3.3rem;
+    height: 2.8rem;
+    margin-right: 1.2rem;
+    background: url("../images/icons/other/svg/basket-black-1.svg") no-repeat center center;
+}
+
+.preview-cart__remark span {
+    padding-top: 0.8rem;
+}

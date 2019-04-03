@@ -1,0 +1,60 @@
+.arrow {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 4.1rem;
+    height: 4.3rem;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #fff;
+    outline: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.arrow::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2.6rem;
+    height: 2.6rem;
+    background: url("../images/icons/other/svg/arrow-left-white-1.svg") no-repeat center center;
+}
+
+.arrow::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
+    background: linear-gradient(180deg, #7D8D9E 0%, #5AA1D8 0.01%, rgba(255, 255, 255, 0) 100%), #0D6EBB;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.arrow--prev {
+
+}
+
+.arrow--next::before {
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
+body:not(.mobile) .arrow:hover {
+    border-color: transparent;
+}
+
+body:not(.mobile) .arrow:hover::after {
+    opacity: 1;
+}
+
+.arrow--type-1 {
+    margin-right: 0.5rem;
+}

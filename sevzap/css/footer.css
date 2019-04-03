@@ -1,0 +1,98 @@
+.footer {
+    min-height: 1px; /* For IE */
+    padding-top: 2.8rem;
+    padding-bottom: 2.8rem;
+    color: #666666;
+    background: linear-gradient(180deg, #F8F8F8 42.15%, rgba(255, 255, 255, 0) 100%), #EFEFEF;
+}
+
+.footer__row {
+    display: flex;
+    align-items: center;
+}
+
+.footer__col-1 {
+    width: 24.2%;
+    margin-right: 2rem;
+    padding-right: 1rem;
+}
+
+.footer__col-2 {
+    width: 49.8%;
+    margin-right: 2rem;
+}
+
+.footer__col-3 {
+    width: calc(99.9% - 24.2% - 49.8% - 2rem * 2);
+}
+
+.footer__copyright {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.footer__developer {
+    font-size: 1.3rem;
+}
+
+.footer__developer a {
+    text-decoration: none;
+    color: #2F479D;
+}
+
+body:not(.mobile) .footer__developer a:hover {
+    text-decoration: underline;
+}
+
+
+
+.logo-footer {
+
+}
+
+.logo-footer__link {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 25rem;
+    width: 100%;
+}
+
+.logo-footer__image {
+
+}
+
+.logo-footer__image img {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
+    width: 100%; /* For svg in IE */
+}
+
+
+
+
+
+
+@media only screen and (max-width: 767px) {
+
+    .footer__row {
+        display: block;
+    }
+
+    .footer__col-1 {
+        width: auto;
+        margin-right: 0;
+        margin-bottom: 2rem;
+        padding-left: 0;
+    }
+
+    .footer__col-2 {
+        width: auto;
+        margin-bottom: 3rem;
+        margin-right: 0;
+    }
+
+    .footer__col-3 {
+        width: auto;
+    }
+}

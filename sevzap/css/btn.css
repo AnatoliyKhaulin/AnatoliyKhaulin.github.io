@@ -1,0 +1,54 @@
+.btn {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    padding: 1rem 4rem;
+    font-family: "Yandex Sans Display", Arial, sans-serif;
+    font-size: 1.4rem;
+    font-weight: normal;
+    line-height: 1.25;
+    text-align: center;
+    text-decoration: none;
+    color: #546580;
+    border: 1px solid #546580;
+    border-radius: 0;
+    outline: 0;
+    background: none;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
+    background: linear-gradient(180deg, #7D8D9E 0%, #5AA1D8 0.01%, rgba(255, 255, 255, 0) 100%), #0D6EBB;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+body:not(.mobile) .btn:hover {
+    border-color: transparent;
+    color: #fff;
+}
+
+body:not(.mobile) .btn:hover::before {
+    opacity: 1;
+}
+
+.btn--style-1 {
+    color: #fff;
+    border-color: #fff;
+}
+
+.btn--fluid {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}

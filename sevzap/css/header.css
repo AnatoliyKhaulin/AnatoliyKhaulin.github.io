@@ -1,0 +1,143 @@
+.header {
+	min-height: 1px; /* For IE */
+	margin-bottom: 2.3rem;
+	font-size: 1.3rem;
+	color: #333333;
+}
+
+.header__row {
+	display: flex;
+	align-items: center;
+}
+
+.header__col-1 {
+	width: 41.1%;
+	margin-right: 2rem;
+}
+
+.header__col-2 {
+	width: 15.4%;
+	margin-right: 2rem;
+	padding-top: 1.1rem;
+}
+
+.header__col-3 {
+	width: 23.3%;
+	margin-right: 2rem;
+}
+
+.header__col-4 {
+	width: calc(99.9% - 41.1% - 15.4% - 23.3% - 2rem * 3);
+	padding-top: 1.5rem;
+	padding-left: 2.7rem;
+}
+
+.header__tel {
+	display: inline-flex;
+	align-items: center;
+	vertical-align: top;
+	font-size: 1.7rem;
+	text-decoration: none;
+	color: inherit;
+}
+
+.header__tel::before {
+	content: "";
+	display: block;
+	width: 1.8rem;
+	min-width: 1.8rem;
+	height: 2.7rem;
+	margin-right: 1rem;
+	background: url("../images/icons/other/svg/tel-black-1.svg") no-repeat center center;
+}
+
+
+
+.logo-header {
+
+}
+
+.logo-header__link {
+	display: inline-block;
+	vertical-align: top;
+	max-width: 39.9rem;
+	width: 100%;
+}
+
+.logo-header__image {
+
+}
+
+.logo-header__image img {
+	display: inline-block;
+	vertical-align: top;
+	max-width: 100%;
+	width: 100%; /* For svg in IE */
+}
+
+
+
+
+
+
+@media only screen and (max-width: 1189px) {
+
+	.header__col-4 {
+		display: flex;
+		justify-content: flex-end;
+		padding-left: 0;
+	}
+}
+
+@media only screen and (max-width: 1020px) {
+
+	.header__col-1 {
+		width: 26%;
+		padding-right: 2rem;
+	}
+
+	.header__col-2 {
+		width: 20%;
+		padding-top: 0;
+	}
+
+	.header__col-3 {
+		width: 29%;
+	}
+
+	.header__col-4 {
+		width: calc(99.9% - 26% - 20% - 29% - 2rem * 3);
+		padding-top: 0;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+
+	.header__row {
+		flex-wrap: wrap;
+	}
+
+	.header__col-1 {
+		width: calc((99.9% - 2rem) / 2);
+		margin-bottom: 1rem;
+		padding-right: 0;
+		order: 5;
+	}
+
+	.header__col-2 {
+		width: calc((99.9% - 2rem) / 2);
+		order: 10;
+	}
+
+	.header__col-3 {
+		width: calc((99.9% - 2rem) / 2);
+		margin-right: 0;
+		order: 11;
+	}
+
+	.header__col-4 {
+		width: calc((99.9% - 2rem) / 2);
+		margin-bottom: 1rem;
+		order: 5;
+	}
+}

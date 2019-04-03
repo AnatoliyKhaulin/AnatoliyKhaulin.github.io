@@ -1,0 +1,27 @@
+.partners {
+
+}
+
+.partners__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.partners__item {
+	margin-bottom: 3.7rem;
+}
+
+.partners__item:last-of-type {
+	margin-bottom: 0;
+}
+
+.partners__image {
+	text-align: center;
+}
+
+.partners__image img {
+	display: inline-block;
+	vertical-align: top;
+	max-width: 100%;
+}

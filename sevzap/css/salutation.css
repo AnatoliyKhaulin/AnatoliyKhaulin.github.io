@@ -1,0 +1,63 @@
+.salutation {
+
+}
+
+.salutation__description {
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+
+.salutation__description::before,
+.salutation__description::after {
+    content: "";
+    display: table;
+}
+
+.salutation__description::after {
+    clear: both;
+}
+
+.salutation__description > :first-child {
+    margin-top: 0;
+}
+
+.salutation__description > :last-child {
+    margin-bottom: 0;
+}
+
+.salutation__description p {
+    margin: 0;
+    margin-bottom: 1.7rem;
+}
+
+.salutation__image {
+    float: left;
+    max-width: 15.6rem;
+    margin-right: 5rem;
+    margin-bottom: 1.8rem;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #BBBBBB;
+}
+
+.salutation__image img {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 1rem;
+}
+
+.salutation__image span {
+    display: block;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 767px) {
+
+    .salutation__image {
+        margin-right: 2rem;
+    }
+}

@@ -1,0 +1,27 @@
+.page {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-between;
+	min-height: 100%;
+}
+
+.page__top {
+	width: 100%;
+	padding-bottom: 5.6rem;
+}
+
+.page__top--services {
+	padding-bottom: 3.6rem;
+}
+
+.page__top > :last-child {
+	margin-bottom: 0;
+}
+
+.page__bottom {
+	width: 100%;
+}
+
+.page__bottom > :last-child {
+	margin-bottom: 0;
+}

@@ -1,0 +1,32 @@
+.footer-nav {
+
+}
+
+.footer-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    margin-bottom: -0.8rem;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-nav__item {
+    width: calc((99.9% - 2rem) / 2);
+    margin-right: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+.footer-nav__item:nth-of-type(2n) {
+    margin-right: 0;
+}
+
+.footer-nav__link {
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #546580;
+}
+
+body:not(.mobile) .footer-nav__link:hover {
+    text-decoration: underline;
+}

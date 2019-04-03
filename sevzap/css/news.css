@@ -1,0 +1,60 @@
+.news {
+
+}
+
+.news--type-1 {
+
+}
+
+.news--type-2 .news__content {
+	padding-top: 0;
+}
+
+.news--type-2 .news__item {
+	margin-bottom: 3rem;
+}
+
+.news__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.news__item {
+	display: flex;
+	margin-bottom: 1.5rem;
+}
+
+.news__item:last-of-type {
+	margin-bottom: 0;
+}
+
+.news__image {
+	min-width: 11.1rem;
+	margin-right: 1.5rem;
+}
+
+.news__image a {
+	display: inline-block;
+	vertical-align: top;
+	max-width: 100%;
+}
+
+.news__image img {
+	display: inline-block;
+	vertical-align: top;
+	max-width: 100%;
+}
+
+.news__content {
+	padding-top: 2rem;
+}
+
+.news__content > :last-child {
+	margin-bottom: 0;
+}
+
+.news__link {
+	font-size: 1.6rem;
+	color: inherit;
+}

@@ -1,0 +1,24 @@
+.text {
+	font-size: 1.6rem;
+	font-weight: normal;
+	line-height: 1.25;
+	color: #546580;
+}
+
+.text > :first-child {
+	margin-top: 0;
+}
+
+.text > :last-child {
+	margin-bottom: 0;
+}
+
+.text::before,
+.text::after {
+	content: "";
+	display: table;
+}
+
+.text::after {
+	clear: both;
+}

@@ -1,0 +1,253 @@
+.nav {
+	margin-bottom: 1.5rem;
+}
+
+.nav.sticky .nav__inner-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+}
+
+.nav.sticky .nav__data {
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.nav__inner-wrapper {
+
+}
+
+.nav__btn-hamburger {
+	display: none;
+	width: 3rem;
+	height: 3rem;
+	font-size: 0;
+	background: url("../images/icons/other/svg/hamburger-menu-white-1.svg") no-repeat center center;
+	transition: 0.2s;
+}
+
+.nav__data {
+	background: linear-gradient(180deg, #5E708F 0%, rgba(208, 208, 208, 0) 100%), #546580;
+	transition: 0.2s;
+}
+
+.nav__list {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.nav__item {
+	position: relative;
+	flex-grow: 1;
+	padding-left: 1px;
+}
+
+.nav__item:first-of-type {
+	padding-left: 0;
+}
+
+.nav__item::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	width: 1px;
+	height: 2.5rem;
+	background-color: #fff;
+	opacity: 0.2;
+}
+
+.nav__item:first-of-type::after {
+	display: none;
+}
+
+.nav__link {
+	position: relative;
+	z-index: 110;
+	display: block;
+	padding: 1.7rem 1rem;
+	font-size: 1.7rem;
+	font-weight: 700;
+	text-decoration: none;
+	text-align: center;
+	color: #fff;
+}
+
+body:not(.mobile) .nav__link:hover {
+	background: linear-gradient(180deg, #7D8D9E 0%, #5AA1D8 0.01%, rgba(255, 255, 255, 0) 100%), #0D6EBB;
+}
+
+.nav__link span {
+	display: inline-block;
+	vertical-align: top;
+}
+
+body:not(.mobile) .nav__link--drop-down span::before {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	width: 0.9rem;
+	height: 0.6rem;
+	margin-top: -0.2rem;
+	margin-right: 0.5rem;
+	background: url("../images/icons/other/svg/arrow-bottom-gray-1.svg") no-repeat center center;
+}
+
+.nav__link--active {
+	background: linear-gradient(180deg, #7D8D9E 0%, #5AA1D8 0.01%, rgba(255, 255, 255, 0) 100%), #0D6EBB;
+}
+
+.nav__item.opened .nav__link ~ .inner-nav {
+	display: block;
+}
+
+.nav__item.opened .nav__link--drop-down {
+	background: linear-gradient(180deg, #7D8D9E 0%, #5AA1D8 0.01%, rgba(255, 255, 255, 0) 100%), #0D6EBB;
+}
+
+.nav__item.opened .nav__link--drop-down span::before {
+	background-image: url("../images/icons/other/svg/arrow-top-white-1.svg");
+}
+
+
+
+.inner-nav {
+	display: none;
+	position: absolute;
+	z-index: 100;
+	width: 50rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	box-shadow: 5px 10px 22px rgba(0, 0, 0, 0.25);
+	background-color: #fff;
+}
+
+.inner-nav__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.inner-nav__item {
+	border-bottom: 1px solid #C4C4C4;
+}
+
+.inner-nav__item:last-of-type {
+	border-bottom: 0;
+}
+
+.inner-nav__link {
+	position: relative;
+	display: block;
+	padding-top: 0.9rem;
+	padding-bottom: 0.9rem;
+	text-decoration: none;
+	color: #333333;
+	transition: 0.2s;
+}
+
+.inner-nav__link--active {
+	font-weight: 700;
+	color: #3D8BC8;
+}
+
+body:not(.mobile) .inner-nav__link:hover {
+	color: #3D8BC8;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 1189px) {
+
+	.nav__link {
+		font-size: 1.6rem;
+	}
+}
+
+
+@media only screen and (max-width: 840px) {
+
+	.nav__inner-wrapper {
+		margin-bottom: 0;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		background: linear-gradient(180deg, #5E708F 0%, rgba(208, 208, 208, 0) 100%), #546580;
+	}
+
+	.nav.visible .nav__btn-hamburger {
+		transform: rotate(-90deg);
+	}
+
+	.nav.visible .nav__data {
+		margin-top: 1rem;
+		visibility: visible;
+		opacity: 1;
+	}
+
+	.nav.sticky .nav__data {
+		max-height: calc(100vh - 60px);
+		overflow: auto;
+	}
+
+	.nav__btn-hamburger {
+		display: block;
+	}
+
+	.nav__data {
+		position: absolute;
+		z-index: 100;
+		left: 0;
+		right: 0;
+		margin-top: 3rem;
+		background: linear-gradient(180deg, #5E708F 0%, rgba(208, 208, 208, 0) 100%), #546580;
+		box-shadow: 0 0 4rem 0 rgba(0, 0, 0, 0.3);
+		visibility: hidden;
+		opacity: 0;
+		transition: 0.2s;
+	}
+
+	.nav__list {
+		display: block;
+	}
+
+	.nav__item {
+		padding-left: 0;
+	}
+
+	.nav__item::after {
+		display: none;
+	}
+
+	.nav__link {
+		padding: 1rem 10px;
+		text-align: left;
+	}
+
+	.nav__link--drop-down span::before {
+		display: none;
+	}
+
+	.inner-nav {
+		display: block;
+		position: static;
+		z-index: auto;
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+		box-shadow: none;
+		background-color: transparent;
+	}
+
+	.inner-nav__link {
+		padding-left: 3rem;
+		padding-right: 10px;
+		color: #fff;
+	}
+}

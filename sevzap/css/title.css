@@ -1,0 +1,41 @@
+.title {
+    position: relative;
+    margin-bottom: 5rem;
+    padding-bottom: 1.6rem;
+    font-size: 2.6rem;
+    font-weight: 400;
+    color: #333333;
+}
+
+.title--size-1 {
+    padding-bottom: 1.3rem;
+    font-size: 1.8rem;
+}
+
+.title--size-2 {
+    padding-bottom: 1.3rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.title--margin-bottom-1 {
+    margin-bottom: 3.4rem;
+}
+
+.title--margin-bottom-2 {
+    margin-bottom: 1.8rem;
+}
+
+.title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(270deg, #FFFFFF 3.15%, rgba(255, 255, 255, 0) 100%), #5A687E;
+}
+
+.title__text {
+    margin: 0;
+}

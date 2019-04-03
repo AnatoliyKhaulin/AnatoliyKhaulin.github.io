@@ -1,0 +1,162 @@
+.categories {
+	margin-bottom: 4rem;
+}
+
+.categories__row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.categories__col-left {
+	width: calc(99.9% - 3rem - 27.1rem);
+	margin-right: 3rem;
+}
+
+.categories__col-right {
+	width: 27.1rem;
+}
+
+.categories__list {
+	column-count: 3;
+	column-gap: 20px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.categories__item {
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	margin-bottom: 0.7rem;
+}
+
+.categories__link {
+	position: relative;
+	padding-left: 1.5rem;
+	font-size: 1.6rem;
+	text-decoration: none;
+	color: inherit;
+	transition: 0.2s;
+}
+
+body:not(.mobile) .categories__link:hover {
+	text-decoration: underline;
+	color: #2B80C4;
+}
+
+body:not(.mobile) .categories__link:hover::before {
+	background-color: #2B80C4;
+}
+
+.categories__link::before {
+	content: "";
+	position: absolute;
+	top: 0.7rem;
+	left: 0;
+	width: 0.6rem;
+	height: 0.6rem;
+	border-radius: 50%;
+	background-color: #546580;
+	transition: 0.2s;
+}
+
+.categories__link-all {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	padding: 0.7rem 1.5rem 0.3rem;
+	font-size: 1.6rem;
+	font-weight: 700;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	background-color: #0D6EBB;
+}
+
+body:not(.mobile) .categories__link-all:hover::before {
+	opacity: 0;
+}
+
+.categories__link-all::before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: linear-gradient(180deg, #5AA1D8 0%, rgba(255, 255, 255, 0) 100%);
+	transition: 0.2s;
+}
+
+.categories__link-all::after {
+	content: "";
+	display: block;
+	width: 10.7rem;
+	min-width: 10.7rem;
+	height: 11.4rem;
+	background: url("../images/icons/other/svg/elephant-1.svg") no-repeat center center;
+	background-size: contain;
+}
+
+.categories__link-all span {
+	display: block;
+	margin-bottom: 1rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.categories__link-all span::before {
+	content: "";
+	transform: rotate(180deg);
+	display: block;
+	width: 5.3rem;
+	height: 4.5rem;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0.1rem;
+	background: url("../images/icons/other/svg/arrow-left-white-1.svg") no-repeat center center;
+	background-size: contain;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 1060px) {
+
+	.categories__list {
+		column-count: 2;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+
+	.categories__list {
+		column-count: 1;
+	}
+}
+
+@media only screen and (max-width: 450px) {
+
+	.categories__row {
+		display: block;
+	}
+
+	.categories__col-left {
+		width: auto;
+		margin-right: 0;
+		margin-bottom: 2rem;
+	}
+
+	.categories__col-right {
+		width: auto;
+	}
+
+	.categories__link-all {
+		max-width: 28rem;
+	}
+}
