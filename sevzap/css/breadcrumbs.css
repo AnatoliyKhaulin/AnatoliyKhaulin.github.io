@@ -51,6 +51,7 @@
 }
 
 .breadcrumbs__last {
+  display: inline-block;
   font-size: 1.4rem;
   padding-right: 0.3125rem;
   color: #546580;
@@ -74,5 +75,12 @@
 
   .breadcrumbs__item {
     line-height: 1;
+  }
+}
+
+@media (min-width: 2047px) {
+  .breadcrumbs__link,
+  .breadcrumbs__last {
+    font-size: 1.6rem;
   }
 }

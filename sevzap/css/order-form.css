@@ -213,3 +213,19 @@
     margin-bottom: 3rem;
   }
 }
+
+@media (min-width: 2047px) {
+  .order-form__footer {
+    font-size: 1.4rem;
+  }
+
+  .order-form__title {
+    font-size: 3rem;
+  }
+
+  .order-form__submit,
+  .order-form__field span,
+  .order-form__field input {
+    font-size: 1.6rem;
+  }
+}

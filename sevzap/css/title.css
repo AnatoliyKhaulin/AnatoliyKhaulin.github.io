@@ -54,3 +54,9 @@
     font-weight: 400;
     margin: 0;
 }
+
+@media (min-width: 2047px) {
+    .title__text {
+        font-size: 3rem;
+    }
+}

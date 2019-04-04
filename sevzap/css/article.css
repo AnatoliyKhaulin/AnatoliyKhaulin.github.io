@@ -212,3 +212,11 @@
     margin-right: 0;
   }
 }
+
+@media (min-width: 2048px) {
+  .article-content ol li,
+  .article-content ul li,
+  .article-content p {
+    font-size: 1.6rem;
+  }
+}
