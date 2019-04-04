@@ -53,6 +53,7 @@
 .breadcrumbs__last {
   font-size: 1.4rem;
   padding-right: 0.3125rem;
+  color: #546580;
 }
 
 @media (min-width: 767px) {
@@ -62,7 +63,7 @@
   }
 }
 
-@media (min-width: 1023px) {
+@media (min-width: 1025px) {
   .breadcrumbs__link:hover::before,
   .breadcrumbs__link:focus::before {
     background-color: #546580;
