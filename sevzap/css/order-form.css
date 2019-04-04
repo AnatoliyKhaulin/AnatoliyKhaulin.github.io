@@ -1,0 +1,203 @@
+.order-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  color: #616161;
+  margin-top: 5.5rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(42.15%, #F8F8F8), to(rgba(255, 255, 255, 0))),
+  #EFEFEF;
+  background: linear-gradient(180deg, #F8F8F8 42.15%, rgba(255, 255, 255, 0) 100%),
+  #EFEFEF;
+}
+
+.order-form__title {
+  margin-top: 0;
+  margin-bottom: 1.7rem;
+  font-size: 2.6rem;
+  text-align: center;
+  width: 100%;
+}
+
+.order-form__fields {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 100%;
+  padding-left: 15rem;
+  padding-right: 15rem;
+  padding-bottom: 2rem;
+}
+
+.order-form__field {
+  width: 100%;
+  max-width: 270px;
+}
+
+.order-form__field--name {
+  margin-right: 2rem;
+}
+
+.order-form__field span {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 1.4rem;
+  line-height: 2.3rem;
+  color: #616161;
+}
+
+.order-form__field input {
+  padding: 0.7rem 1rem;
+  font-size: 1.4rem;
+  line-height: 2.3rem;
+  border: 1px solid #616161;
+  background-color: transparent;
+  width: 100%;
+  border-radius: 0;
+}
+
+.order-form__submit {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  max-width: 270px;
+  padding: 0.8rem 1rem;
+  border: none;
+  font-size: 1.4rem;
+  line-height: 2.3rem;
+  color: #FFFFFF;
+  background: -webkit-gradient(linear, left top, left bottom, from(#7D8D9E), color-stop(0.01%, #5AA1D8), to(rgba(255, 255, 255, 0))),
+  #0D6EBB;
+  background: linear-gradient(180deg, #7D8D9E 0%, #5AA1D8 0.01%, rgba(255, 255, 255, 0) 100%),
+  #0D6EBB;
+  -webkit-box-shadow: 0px 4px 22px rgba(255, 255, 255, 0.15);
+          box-shadow: 0px 4px 22px rgba(255, 255, 255, 0.15);
+}
+
+.order-form__submit span {
+  position: relative;
+  z-index: 2;
+}
+
+.order-form__submit::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255, 255, 255, 0)), color-stop(99%, #5AA1D8), to(#7D8D9E)),
+  #0D6EBB;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0, #5AA1D8 99%, #7D8D9E 100%),
+  #0D6EBB;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.order-form__footer {
+  font-size: 1.2rem;
+  line-height: 1.9rem;
+  text-align: center;
+}
+
+.order-form__footer a {
+  position: relative;
+  display: inline-block;
+  color: #4a5a75;
+  text-decoration: none;
+}
+
+.order-form__footer a::after {
+  content: "";
+  position: absolute;
+  bottom: 0.3rem;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background-color: #4a5a75;
+  -webkit-transition: width 0.2s, left 0.2s;
+  transition: width 0.2s, left 0.2s;
+
+}
+
+@media (min-width: 1023px) {
+  .order-form__submit:focus::before,
+  .order-form__submit:hover::before {
+    opacity: 1;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+  }
+
+  .order-form__footer a:hover::after {
+    left: 0;
+    width: 100%;
+    -webkit-transition: width 0.2s, left 0.2s;
+    transition: width 0.2s, left 0.2s;
+  }
+}
+
+@media (max-width: 1200px) {
+  .order-form__field--name {
+    margin-right: 4rem;
+  }
+
+  .order-form__field--phone {
+    margin-right: 2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .order-form__fields {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .order-form__fields {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .order-form__field--name,
+  .order-form__field--phone {
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .order-form__field--phone {
+    margin-bottom: 3rem;
+  }
+}
