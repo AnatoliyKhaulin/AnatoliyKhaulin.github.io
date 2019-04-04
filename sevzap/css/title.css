@@ -35,6 +35,10 @@
     margin-bottom: 1.8rem;
 }
 
+.title--margin-bottom-3 {
+    margin-bottom: 4.1rem;
+}
+
 .title::after {
     content: "";
     position: absolute;

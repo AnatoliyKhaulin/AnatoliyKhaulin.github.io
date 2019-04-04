@@ -18,6 +18,15 @@
   margin-right: 30px;
 }
 
+.article-picture--small {
+  max-width: 370px;
+  max-height: 195px;
+}
+
+.article-picture--mt {
+  margin-top: 2.6rem;
+}
+
 .article-picture::before {
   content: "";
   position: absolute;
@@ -171,6 +180,11 @@
     height: calc(300 / 1190 * 100vw);
   }
 
+  .article-picture--small {
+    width: calc(370 / 1190 * 100vw);
+    height: calc(195 / 1190 * 100vw);
+  }
+
   .article-picture--right {
     margin-left: calc(30 / 1190 * 100vw);
   }
@@ -186,6 +200,8 @@
     width: 100%;
     height: auto;
     margin-bottom: 3rem;
+    max-width: 100%;
+    max-height: 100%;
   }
 
   .article-picture--right {
