@@ -16,3 +16,63 @@
   width: 10px;
   height: 14px;
 }
+
+.icon-adress::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 24px;
+  width: 18px;
+  background-image: url("../images/icons/other/svg/marker-black-1.svg");
+  transform: translateX(-50%);
+}
+
+.icon-time::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 19px;
+  width: 19px;
+  background-image: url("../images/icons/other/svg/ic_clock.svg");
+  transform: translateX(-50%);
+}
+
+.icon-phone::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 24px;
+  width: 15px;
+  background-image: url("../images/icons/other/svg/tel-black-1.svg");
+  transform: translateX(-50%);
+}
+
+.icon-operator::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 25px;
+  width: 20px;
+  background-image: url("../images/icons/other/svg/ic_operator.svg");
+  transform: translateX(-50%);
+}
+
+.icon-email::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 13.5px;
+  width: 19.5px;
+  background-image: url("../images/icons/other/svg/ic_mail.svg");
+  transform: translateX(-50%);
+}
