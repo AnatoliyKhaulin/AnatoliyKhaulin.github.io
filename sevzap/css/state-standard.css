@@ -152,3 +152,10 @@
     padding-right: 1.5rem;
   }
 }
+
+@media (min-width: 2048px) {
+  .state-standard__decription,
+  .state-standard-item__link {
+    font-size: 1.6rem;
+  }
+}

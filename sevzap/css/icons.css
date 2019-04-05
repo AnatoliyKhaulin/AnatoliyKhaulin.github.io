@@ -1,0 +1,18 @@
+.icon-close {
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 50%;
+  width: 29px;
+  height: 29px;
+  background-color: #BCC1CB;
+  background-image: url("../images/icons/other/svg/close.svg");
+  background-position: 50% 50%;
+}
+
+.icon-rouble {
+  display: inline-block;
+  vertical-align: bottom;
+  margin-bottom: 2px;
+  width: 10px;
+  height: 14px;
+}

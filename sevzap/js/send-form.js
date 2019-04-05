@@ -46,7 +46,6 @@ let ajaxPost = (cls, classError, func) => {
         func(data);
       });
     } else {
-      // Убираем ошибку при фокусе
       let orderFieldInput = $('.order-form__field input');
 
       orderFieldInput.on('focus', (e) => {

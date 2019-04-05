@@ -36,6 +36,14 @@
     transition: 0.2s;
 }
 
+.btn--blue {
+    color: #fff;
+}
+
+.btn--blue::before {
+    opacity: 1;
+}
+
 body:not(.mobile) .btn:hover {
     border-color: transparent;
     color: #fff;
@@ -54,4 +62,13 @@ body:not(.mobile) .btn:hover::before {
     width: 100%;
     padding-left: 1rem;
     padding-right: 1rem;
+}
+
+body:not(.mobile) .btn--blue:hover {
+    border-color: #546580;
+    color: #546580;
+}
+
+body:not(.mobile) .btn--blue:hover::before {
+    opacity: 0;
 }
