@@ -1,4 +1,5 @@
 .icon-close {
+  position: relative;
   cursor: pointer;
   display: inline-block;
   border-radius: 50%;
@@ -6,7 +7,9 @@
   height: 29px;
   background-color: #BCC1CB;
   background-image: url("../images/icons/other/svg/close.svg");
-  background-position: 50% 50%;
+  background-position: 40% 50%;
+  background-repeat: no-repeat;
+  background-size: 90%;
 }
 
 .icon-rouble {
@@ -26,7 +29,8 @@
   height: 24px;
   width: 18px;
   background-image: url("../images/icons/other/svg/marker-black-1.svg");
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .icon-time::before {
@@ -38,7 +42,8 @@
   height: 19px;
   width: 19px;
   background-image: url("../images/icons/other/svg/ic_clock.svg");
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .icon-phone::before {
@@ -50,7 +55,8 @@
   height: 24px;
   width: 15px;
   background-image: url("../images/icons/other/svg/tel-black-1.svg");
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .icon-operator::before {
@@ -62,7 +68,8 @@
   height: 25px;
   width: 20px;
   background-image: url("../images/icons/other/svg/ic_operator.svg");
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .icon-email::before {
@@ -74,5 +81,13 @@
   height: 13.5px;
   width: 19.5px;
   background-image: url("../images/icons/other/svg/ic_mail.svg");
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media (min-width: 2048px) {
+  .icon-close {
+    background-position: 38% 50%;
+    background-size: 90%;
+  }
 }
