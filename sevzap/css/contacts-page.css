@@ -17,6 +17,7 @@
   text-decoration: none;
   background-color: #f1f1f1;
   color: #546580;
+  transition: color 0.3s;
 }
 
 .contacts-page__tab-link.-active {
@@ -243,6 +244,17 @@
   .contacts-adress__download:focus img {
     transform: translateY(2px);
     transition: transform 0.2s;
+  }
+
+  .contacts-page__tab-link:focus,
+  .contacts-page__tab-link:hover {
+    font-weight: 700;
+    background:
+      linear-gradient(180deg, #5E708F 0%, rgba(208, 208, 208, 0) 100%),
+      linear-gradient(0deg, #546580, #546580),
+      #546580;
+    color: #fff;
+    transition: color 0.3s;
   }
 }
 
