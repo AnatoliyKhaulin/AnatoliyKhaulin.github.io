@@ -85,6 +85,50 @@
           transform: translateX(-50%);
 }
 
+.icon-arrow-filter {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #E8E8E8;
+}
+
+.icon-arrow-filter::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/icons/catalog/svg/ic_arrow_down.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.icon-to-basket {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 58px;
+  height: 40px;
+  background-color: #5A687E;
+}
+
+.icon-to-basket::after {
+  display: none;
+}
+
+.icon-to-basket::before {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 18px;
+  margin-right: 5px;
+  background-image: url("../images/icons/other/svg/basket-white.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
 @media (min-width: 2048px) {
   .icon-close {
     background-position: 38% 50%;
