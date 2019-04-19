@@ -1,0 +1,120 @@
+.advantages {
+  position: relative; }
+  .advantages .section-title {
+    margin-top: 54px; }
+  .advantages__wrapper {
+    display: grid;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+       -moz-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    grid-template-columns: repeat(2, 37.5%);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-top: 47px;
+    background-image: url("../images/balerine.png");
+    background-position: 48.5% 46%;
+    background-repeat: no-repeat; }
+    @media (max-width: 767px) {
+      .advantages__wrapper {
+        grid-template-columns: repeat(1, 100%);
+        background: none; } }
+
+.advantages-item {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: column nowrap;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .advantages-item:not(:last-child) {
+    margin-bottom: 40px; }
+  .advantages-item__pic {
+    position: relative;
+    border: 1px solid #a1db49;
+    padding: 7px;
+    width: 78px;
+    height: 78px;
+    -webkit-box-shadow: 5px 5px 0 #d1eddc, -5px -5px 0 #e6f8cc;
+       -moz-box-shadow: 5px 5px 0 #d1eddc, -5px -5px 0 #e6f8cc;
+            box-shadow: 5px 5px 0 #d1eddc, -5px -5px 0 #e6f8cc;
+    background-color: #fff; }
+    .advantages-item__pic svg {
+      width: 100%;
+      height: 100%; }
+  .advantages-item__title {
+    margin: 10px 0;
+    margin-top: 17px;
+    font-family: "PF Handbook Pro", "Open Sans", -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    color: #186a47; }
+  .advantages-item__descr {
+    overflow: hidden;
+    margin: 0;
+    max-height: 105px;
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: center;
+    color: #333; }
+    @media (max-width: 767px) {
+      .advantages-item__descr {
+        padding-right: 20%;
+        padding-left: 20%; } }
+    @media (max-width: 490px) {
+      .advantages-item__descr {
+        padding-right: 10px;
+        padding-left: 10px; } }
+  .advantages-item__dot {
+    position: absolute;
+    top: 55%; }
+    .advantages-item__dot.horizontal-image {
+      max-width: none; }
+    .advantages-item__dot--bottom {
+      top: auto;
+      bottom: 53%; }
+    .advantages-item__dot--left {
+      right: -300px; }
+      @media (max-width: 1200px) {
+        .advantages-item__dot--left {
+          right: -21.42857vw;
+          width: 19.28571vw; } }
+    .advantages-item__dot--right {
+      left: -300px; }
+      @media (max-width: 1200px) {
+        .advantages-item__dot--right {
+          left: -21.42857vw;
+          width: 19.28571vw; } }
+    .advantages-item__dot--center {
+      right: -220px; }
+      .advantages-item__dot--center.advantages-item__dot--right {
+        left: -220px; }
+        @media (max-width: 1200px) {
+          .advantages-item__dot--center.advantages-item__dot--right {
+            left: -15.71429vw; } }
+      @media (max-width: 1200px) {
+        .advantages-item__dot--center {
+          right: -15.71429vw;
+          width: 14.07143vw; } }
+    @media (max-width: 767px) {
+      .advantages-item__dot {
+        display: none; } }
+
+/*# sourceMappingURL=advantages.css.map */

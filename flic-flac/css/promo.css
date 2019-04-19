@@ -1,0 +1,93 @@
+.promo {
+  overflow: hidden;
+  width: 100%;
+  height: 34.28571vw; }
+  .promo .glide {
+    width: 100%;
+    height: 100%; }
+    .promo .glide__slide {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; }
+      .promo .glide__slide img {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%; }
+        @media (max-width: 767px) {
+          .promo .glide__slide img {
+            width: 150%;
+            max-width: none;
+            -webkit-transform: translateX(-10%);
+               -moz-transform: translateX(-10%);
+                -ms-transform: translateX(-10%);
+                 -o-transform: translateX(-10%);
+                    transform: translateX(-10%); } }
+        @media (max-width: 490px) {
+          .promo .glide__slide img {
+            width: 160%; } }
+      @media (max-width: 767px) {
+        .promo .glide__slide .container {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+             -moz-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          height: 100%;
+          padding-bottom: 10%; } }
+    .promo .glide__track, .promo .glide__slides {
+      margin: 0;
+      height: 100%; }
+  .promo__title {
+    position: relative;
+    z-index: 1;
+    margin-top: 4.42857vw;
+    max-width: 671px;
+    font-family: "DIN Pro", "Open Sans", -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #646464; }
+    .promo__title span {
+      display: block;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 1.1;
+      color: #186a47; }
+      @media (max-width: 1200px) {
+        .promo__title span {
+          font-size: 2.85714vw; } }
+      @media (max-width: 767px) {
+        .promo__title span {
+          font-size: 5.20833vw; } }
+    @media (max-width: 1200px) {
+      .promo__title {
+        max-width: 47.92857vw;
+        font-size: 2.14286vw; } }
+    @media (max-width: 767px) {
+      .promo__title {
+        margin-top: auto;
+        margin-bottom: auto;
+        max-width: 100%;
+        font-size: 3.90625vw; } }
+  @media (max-width: 1023px) {
+    .promo {
+      height: 37.10938vw; } }
+  @media (max-width: 767px) {
+    .promo {
+      height: 54.6875vw; } }
+  @media (max-width: 490px) {
+    .promo {
+      height: 65.30612vw; } }
+
+/*# sourceMappingURL=promo.css.map */

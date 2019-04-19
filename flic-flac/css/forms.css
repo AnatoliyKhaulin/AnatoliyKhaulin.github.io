@@ -1,0 +1,131 @@
+.search-field {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 174px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box; }
+  .search-field svg {
+    position: absolute;
+    left: 13px;
+    top: 51%;
+    width: 15px;
+    height: 15px;
+    -webkit-transform: translateY(-50%);
+       -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+         -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+    -webkit-transition: top 0.3s;
+    -o-transition: top 0.3s;
+    -moz-transition: top 0.3s;
+    transition: top 0.3s; }
+  .search-field input[type="search"] {
+    display: block;
+    margin: 0;
+    border: none;
+    -webkit-border-radius: 40px;
+       -moz-border-radius: 40px;
+            border-radius: 40px;
+    padding: 10px 15px;
+    max-width: 100%;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    font-size: 14px;
+    background-color: #f8f8f8; }
+    .search-field input[type="search"]::-webkit-input-placeholder {
+      padding-left: 29px;
+      color: #919090;
+      -webkit-transition: color 0.3s;
+      -o-transition: color 0.3s;
+      -moz-transition: color 0.3s;
+      transition: color 0.3s; }
+    .search-field input[type="search"]:-moz-placeholder {
+      padding-left: 29px;
+      color: #919090;
+      -webkit-transition: color 0.3s;
+      -o-transition: color 0.3s;
+      -moz-transition: color 0.3s;
+      transition: color 0.3s; }
+    .search-field input[type="search"]::-moz-placeholder {
+      padding-left: 29px;
+      color: #919090;
+      -webkit-transition: color 0.3s;
+      -o-transition: color 0.3s;
+      -moz-transition: color 0.3s;
+      transition: color 0.3s; }
+    .search-field input[type="search"]:-ms-input-placeholder {
+      padding-left: 29px;
+      color: #919090;
+      -webkit-transition: color 0.3s;
+      -o-transition: color 0.3s;
+      -moz-transition: color 0.3s;
+      transition: color 0.3s; }
+    .search-field input[type="search"]::-ms-input-placeholder {
+      padding-left: 29px;
+      color: #919090;
+      -webkit-transition: color 0.3s;
+      -o-transition: color 0.3s;
+      -moz-transition: color 0.3s;
+      transition: color 0.3s; }
+    .search-field input[type="search"]::placeholder {
+      padding-left: 29px;
+      color: #919090;
+      -webkit-transition: color 0.3s;
+      -o-transition: color 0.3s;
+      -moz-transition: color 0.3s;
+      transition: color 0.3s; }
+    .search-field input[type="search"]:focus {
+      outline: none; }
+      .search-field input[type="search"]:focus::-webkit-input-placeholder {
+        color: transparent;
+        -webkit-transition: color 0.3s;
+        -o-transition: color 0.3s;
+        -moz-transition: color 0.3s;
+        transition: color 0.3s; }
+      .search-field input[type="search"]:focus:-moz-placeholder {
+        color: transparent;
+        -webkit-transition: color 0.3s;
+        -o-transition: color 0.3s;
+        -moz-transition: color 0.3s;
+        transition: color 0.3s; }
+      .search-field input[type="search"]:focus::-moz-placeholder {
+        color: transparent;
+        -webkit-transition: color 0.3s;
+        -o-transition: color 0.3s;
+        -moz-transition: color 0.3s;
+        transition: color 0.3s; }
+      .search-field input[type="search"]:focus:-ms-input-placeholder {
+        color: transparent;
+        -webkit-transition: color 0.3s;
+        -o-transition: color 0.3s;
+        -moz-transition: color 0.3s;
+        transition: color 0.3s; }
+      .search-field input[type="search"]:focus::-ms-input-placeholder {
+        color: transparent;
+        -webkit-transition: color 0.3s;
+        -o-transition: color 0.3s;
+        -moz-transition: color 0.3s;
+        transition: color 0.3s; }
+      .search-field input[type="search"]:focus::placeholder {
+        color: transparent;
+        -webkit-transition: color 0.3s;
+        -o-transition: color 0.3s;
+        -moz-transition: color 0.3s;
+        transition: color 0.3s; }
+      .search-field input[type="search"]:focus + svg {
+        top: 130%;
+        -webkit-transition: top 0.3s;
+        -o-transition: top 0.3s;
+        -moz-transition: top 0.3s;
+        transition: top 0.3s; }
+  @media (max-width: 1200px) {
+    .search-field {
+      max-width: 12.42857vw; } }
+  @media (max-width: 1023px) {
+    .search-field {
+      max-width: 175px; } }
+
+/*# sourceMappingURL=forms.css.map */
