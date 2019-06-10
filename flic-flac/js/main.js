@@ -824,7 +824,10 @@ jquery__WEBPACK_IMPORTED_MODULE_3___default()('select').customSelect({
   includeValue: true,
   transition: 100
 });
-lightGallery(document.getElementById('lightgallery'));
+var lightGalleryItems = document.querySelectorAll('.lightgallery');
+lightGalleryItems.forEach(function (item, index) {
+  lightGallery(item);
+});
 
 /***/ })
 
