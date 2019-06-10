@@ -184,6 +184,24 @@ if (/Mobi/.test(navigator.userAgent)) {
   }
 }
 
+var $catalogSidebarNavLink = $('.js-sidebar-nav-link');
+$catalogSidebarNavLink.on('click', function (e) {
+  var $this = $(e.currentTarget);
+  var dropdownMenu = $this.find('.js-sidebar-nav-dropdown');
+
+  if (dropdownMenu.length > 0) {
+    e.preventDefault();
+  }
+
+  if (!$this.hasClass('open') && dropdownMenu.length > 0) {
+    $this.addClass('open');
+    dropdownMenu.addClass('open');
+  } else {
+    $this.removeClass('open');
+    dropdownMenu.removeClass('open');
+  }
+});
+
 /***/ }),
 
 /***/ "./src/js/contacts-map.js":
@@ -196,12 +214,15 @@ if (/Mobi/.test(navigator.userAgent)) {
 var adressCordOne = [59.844050, 30.386979];
 var adressCordTwo = [60.026132, 30.317916];
 var adressCordThree = [59.940271, 30.265374];
+var indexMap = document.querySelector('#contactsMap');
 var contactsAdressOne = document.querySelector('#contactsAdressOne');
 var contactsAdressTwo = document.querySelector('#contactsAdressTwo');
 var contactsAdressThree = document.querySelector('#contactsAdressThree');
+var contactsMapAdressFirst = document.querySelector('#contactsMapAdressFirst');
+var contactsMapAdressSecond = document.querySelector('#contactsMapAdressSecond');
+var contactsMapAdressThird = document.querySelector('#contactsMapAdressThird');
 
 function init() {
-  // Карта первая вкладка
   var contactsMap = new ymaps.Map("contactsMap", {
     center: adressCordOne,
     zoom: 9
@@ -290,7 +311,162 @@ function init() {
   });
 }
 
-ymaps.ready(init);
+function initMapAdressFirst() {
+  var contactsMap = new ymaps.Map(contactsMapAdressFirst, {
+    center: adressCordOne,
+    zoom: 16
+  }, {
+    searchControlProvider: 'yandex#search'
+  });
+  contactsMap.controls.add(new ymaps.control.ZoomControl({
+    options: {
+      position: {
+        left: 10,
+        bottom: 70
+      }
+    }
+  }));
+  onePlacemark = new ymaps.Placemark(adressCordOne, {
+    hintContent: '«ФЛИК ФЛЯК» КУПЧИНО:',
+    balloonContent: '192284, Санкт-Петербург, ул. Купчинская, 4 (корп. 4)'
+  }, {
+    // Опции.
+    // Необходимо указать данный тип макета.
+    iconLayout: 'default#image',
+    // Своё изображение иконки метки.
+    iconImageHref: './images/sprites/svg/flac_location_map.svg',
+    // Размеры метки.
+    iconImageSize: [123, 63],
+    // Смещение левого верхнего угла иконки относительно
+    // её "ножки" (точки привязки).
+    iconImageOffset: [-5, -38]
+  });
+  contactsMap.geoObjects.add(onePlacemark);
+  contactsMap.controls.remove('geolocationControl');
+  contactsMap.controls.remove('searchControl');
+  contactsMap.controls.remove('trafficControl');
+  contactsMap.controls.remove('typeSelector');
+  contactsMap.controls.remove('fullscreenControl');
+  contactsMap.controls.remove('rulerControl');
+  contactsMap.controls.remove('zoomControl');
+  contactsMap.behaviors.disable('scrollZoom');
+  contactsMap.behaviors.disable('drag');
+  $(window).on('resize', function () {
+    setTimeout(function () {
+      contactsMap.container.fitToViewport();
+    }, 250);
+  });
+}
+
+function initMapAdressSecond() {
+  var contactsMap = new ymaps.Map(contactsMapAdressSecond, {
+    center: adressCordTwo,
+    zoom: 16
+  }, {
+    searchControlProvider: 'yandex#search'
+  });
+  contactsMap.controls.add(new ymaps.control.ZoomControl({
+    options: {
+      position: {
+        left: 10,
+        bottom: 70
+      }
+    }
+  }));
+  onePlacemark = new ymaps.Placemark(adressCordTwo, {
+    hintContent: '«ФЛИК ФЛЯК» Озерки:',
+    balloonContent: '192284, Санкт-Петербург, пр. Энгельса 98'
+  }, {
+    // Опции.
+    // Необходимо указать данный тип макета.
+    iconLayout: 'default#image',
+    // Своё изображение иконки метки.
+    iconImageHref: './images/sprites/svg/flac_location_map.svg',
+    // Размеры метки.
+    iconImageSize: [123, 63],
+    // Смещение левого верхнего угла иконки относительно
+    // её "ножки" (точки привязки).
+    iconImageOffset: [-5, -38]
+  });
+  contactsMap.geoObjects.add(onePlacemark);
+  contactsMap.controls.remove('geolocationControl');
+  contactsMap.controls.remove('searchControl');
+  contactsMap.controls.remove('trafficControl');
+  contactsMap.controls.remove('typeSelector');
+  contactsMap.controls.remove('fullscreenControl');
+  contactsMap.controls.remove('rulerControl');
+  contactsMap.controls.remove('zoomControl');
+  contactsMap.behaviors.disable('scrollZoom');
+  contactsMap.behaviors.disable('drag');
+  $(window).on('resize', function () {
+    setTimeout(function () {
+      contactsMap.container.fitToViewport();
+    }, 250);
+  });
+}
+
+function initMapAdressThird() {
+  var contactsMap = new ymaps.Map(contactsMapAdressThird, {
+    center: adressCordThree,
+    zoom: 16
+  }, {
+    searchControlProvider: 'yandex#search'
+  });
+  contactsMap.controls.add(new ymaps.control.ZoomControl({
+    options: {
+      position: {
+        left: 10,
+        bottom: 70
+      }
+    }
+  }));
+  onePlacemark = new ymaps.Placemark(adressCordThree, {
+    hintContent: '«ФЛИК ФЛЯК» ВАСИЛЕОСТРОВСКАЯ:',
+    balloonContent: 'метро Василеостровская, 16 линия В.О. д. 45'
+  }, {
+    // Опции.
+    // Необходимо указать данный тип макета.
+    iconLayout: 'default#image',
+    // Своё изображение иконки метки.
+    iconImageHref: './images/sprites/svg/flac_location_map.svg',
+    // Размеры метки.
+    iconImageSize: [123, 63],
+    // Смещение левого верхнего угла иконки относительно
+    // её "ножки" (точки привязки).
+    iconImageOffset: [-5, -38]
+  });
+  contactsMap.geoObjects.add(onePlacemark);
+  contactsMap.controls.remove('geolocationControl');
+  contactsMap.controls.remove('searchControl');
+  contactsMap.controls.remove('trafficControl');
+  contactsMap.controls.remove('typeSelector');
+  contactsMap.controls.remove('fullscreenControl');
+  contactsMap.controls.remove('rulerControl');
+  contactsMap.controls.remove('zoomControl');
+  contactsMap.behaviors.disable('scrollZoom');
+  contactsMap.behaviors.disable('drag');
+  $(window).on('resize', function () {
+    setTimeout(function () {
+      contactsMap.container.fitToViewport();
+    }, 250);
+  });
+}
+
+if (indexMap) {
+  ymaps.ready(init);
+}
+
+if (contactsMapAdressFirst) {
+  ymaps.ready(initMapAdressFirst);
+}
+
+if (contactsMapAdressSecond) {
+  ymaps.ready(initMapAdressSecond);
+}
+
+if (contactsMapAdressThird) {
+  ymaps.ready(initMapAdressThird);
+}
 
 /***/ }),
 
@@ -332,6 +508,42 @@ if (/Mobi/.test(navigator.userAgent)) {
       _loop(i);
     }
   })();
+}
+
+/***/ }),
+
+/***/ "./src/js/fives-slider.js":
+/*!********************************!*\
+  !*** ./src/js/fives-slider.js ***!
+  \********************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @glidejs/glide */ "./node_modules/@glidejs/glide/dist/glide.esm.js");
+
+var fivesSliderContainer = document.querySelector('.glide--fives');
+
+if (fivesSliderContainer) {
+  var glide = new _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__["default"](fivesSliderContainer, {
+    type: 'carousel',
+    autoplay: false,
+    perView: 5,
+    gap: 16,
+    breakpoints: {
+      1024: {
+        gap: 8
+      },
+      768: {
+        perView: 3
+      },
+      600: {
+        perView: 1
+      }
+    }
+  });
+  glide.mount();
 }
 
 /***/ }),
@@ -391,17 +603,26 @@ window.addEventListener('resize', function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _header_mobile__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./header-mobile */ "./src/js/header-mobile.js");
-/* harmony import */ var _header_mobile__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_header_mobile__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _vendor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./vendor */ "./src/js/vendor.js");
+/* harmony import */ var _vendor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vendor */ "./src/js/vendor.js");
+/* harmony import */ var _header_mobile__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header-mobile */ "./src/js/header-mobile.js");
+/* harmony import */ var _header_mobile__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_header_mobile__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _dropdown_menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./dropdown-menu */ "./src/js/dropdown-menu.js");
 /* harmony import */ var _dropdown_menu__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_dropdown_menu__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _once_slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./once-slider */ "./src/js/once-slider.js");
 /* harmony import */ var _catalog__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./catalog */ "./src/js/catalog.js");
 /* harmony import */ var _catalog__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_catalog__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _triple_slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./triple-slider */ "./src/js/triple-slider.js");
-/* harmony import */ var _contacts_map__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./contacts-map */ "./src/js/contacts-map.js");
-/* harmony import */ var _contacts_map__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_contacts_map__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _fives_slider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./fives-slider */ "./src/js/fives-slider.js");
+/* harmony import */ var _contacts_map__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./contacts-map */ "./src/js/contacts-map.js");
+/* harmony import */ var _contacts_map__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_contacts_map__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _tabs__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./tabs */ "./src/js/tabs.js");
+/* harmony import */ var _tabs__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_tabs__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _popup__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./popup */ "./src/js/popup.js");
+/* harmony import */ var _popup__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_popup__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var jquery_nice_number_src_jquery_nice_number__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! jquery.nice-number/src/jquery.nice-number */ "./node_modules/jquery.nice-number/src/jquery.nice-number.js");
+/* harmony import */ var jquery_nice_number_src_jquery_nice_number__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(jquery_nice_number_src_jquery_nice_number__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_11__);
 
 
 
@@ -409,6 +630,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+
+
+jquery__WEBPACK_IMPORTED_MODULE_11___default()('input[type="number"]').niceNumber();
 
 /***/ }),
 
@@ -425,7 +652,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var onceSliderContainer = document.querySelector('.glide--single');
 
-if (onceSliderContainer !== null) {
+if (onceSliderContainer) {
   var glide = new _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__["default"](onceSliderContainer, {
     type: 'carousel',
     autoplay: 6000,
@@ -435,6 +662,64 @@ if (onceSliderContainer !== null) {
   });
   glide.mount();
 }
+
+/***/ }),
+
+/***/ "./src/js/popup.js":
+/*!*************************!*\
+  !*** ./src/js/popup.js ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var $popupLink = $('.show-popup');
+var $popupContainer = $('.popup');
+var $popupClose = $('.popup__close');
+
+var openPopup = function openPopup(e) {
+  e.preventDefault();
+  var $this = $(e.currentTarget);
+  var $thisTarget = $this.data('target');
+  var $popupName;
+  $popupContainer.each(function (index, item) {
+    $popupName = $(this).attr('id');
+
+    if ($popupName === $thisTarget) {
+      $(this).addClass('show');
+    }
+  });
+};
+
+var closePopup = function closePopup(e) {
+  e.preventDefault();
+  $popupContainer.removeClass('show');
+};
+
+$popupLink.on('click', openPopup);
+$popupClose.on('click', closePopup);
+
+/***/ }),
+
+/***/ "./src/js/tabs.js":
+/*!************************!*\
+  !*** ./src/js/tabs.js ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$('.tabs__link').click(function () {
+  var tab_id = $('.tabs__content').attr('id');
+  var datatarget = $(this).attr('data-target');
+
+  if ($("#" + datatarget == tab_id)) {
+    $('.tabs__link').removeClass('is-active');
+    $('.tabs__content').removeClass('is-active');
+    $(this).addClass('is-active');
+    $("#" + datatarget).addClass('is-active');
+  } else {
+    $('.tabs__content').html('Нет информации');
+  }
+});
 
 /***/ }),
 
@@ -449,24 +734,28 @@ if (onceSliderContainer !== null) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @glidejs/glide */ "./node_modules/@glidejs/glide/dist/glide.esm.js");
 
-var glide = new _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__["default"]('.glide--triple', {
-  type: 'carousel',
-  autoplay: false,
-  perView: 3,
-  gap: 34,
-  breakpoints: {
-    1024: {
-      gap: 20
-    },
-    768: {
-      perView: 2
-    },
-    600: {
-      perView: 1
+var tripleSliderContainer = document.querySelector('.glide--triple');
+
+if (tripleSliderContainer) {
+  var glide = new _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__["default"](tripleSliderContainer, {
+    type: 'carousel',
+    autoplay: false,
+    perView: 3,
+    gap: 34,
+    breakpoints: {
+      1024: {
+        gap: 20
+      },
+      768: {
+        perView: 2
+      },
+      600: {
+        perView: 1
+      }
     }
-  }
-});
-glide.mount();
+  });
+  glide.mount();
+}
 
 /***/ }),
 
@@ -487,6 +776,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var svg4everybody__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(svg4everybody__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var jquery_custom_select__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! jquery-custom-select */ "./node_modules/jquery-custom-select/jquery.custom-select.js");
+/* harmony import */ var lightgallery_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! lightgallery.js */ "./node_modules/lightgallery.js/lib/js/lightgallery.js");
+/* harmony import */ var lightgallery_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(lightgallery_js__WEBPACK_IMPORTED_MODULE_5__);
+
+
 
 
 
@@ -525,6 +819,12 @@ try {
     }
   }
 }
+
+jquery__WEBPACK_IMPORTED_MODULE_3___default()('select').customSelect({
+  includeValue: true,
+  transition: 100
+});
+lightGallery(document.getElementById('lightgallery'));
 
 /***/ })
 

@@ -128,4 +128,190 @@
     .search-field {
       max-width: 175px; } }
 
+.form-field {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row nowrap;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .form-field span {
+    margin-right: 10px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-weight: 600;
+    font-size: 14px; }
+  .form-field input {
+    border: 1px solid #d7d7d7;
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+            border-radius: 0;
+    padding: 4px;
+    width: 100%; }
+  .form-field--checkbox {
+    cursor: pointer; }
+    .form-field--checkbox input[type="checkbox"] {
+      position: absolute;
+      overflow: hidden;
+      margin: -1px;
+      width: 1px;
+      height: 1px;
+      clip: rect(0 0 0 0); }
+      .form-field--checkbox input[type="checkbox"]:checked + .checkbox-ic > .checkbox-ic-tick {
+        -webkit-transform: translate(-50%, -50%) scale(1);
+           -moz-transform: translate(-50%, -50%) scale(1);
+            -ms-transform: translate(-50%, -50%) scale(1);
+             -o-transform: translate(-50%, -50%) scale(1);
+                transform: translate(-50%, -50%) scale(1);
+        -webkit-transition: -webkit-transform 0.2s;
+        transition: -webkit-transform 0.2s;
+        -o-transition: -o-transform 0.2s;
+        -moz-transition: transform 0.2s, -moz-transform 0.2s;
+        transition: transform 0.2s;
+        transition: transform 0.2s, -webkit-transform 0.2s, -moz-transform 0.2s, -o-transform 0.2s; }
+    .form-field--checkbox .checkbox-ic {
+      position: relative;
+      border: 1px solid #d7d7d7;
+      width: 20px;
+      height: 20px; }
+      .form-field--checkbox .checkbox-ic-tick {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 16px;
+        height: 12px;
+        fill: #68ac02;
+        -webkit-transform: translate(-50%, -50%) scale(0);
+           -moz-transform: translate(-50%, -50%) scale(0);
+            -ms-transform: translate(-50%, -50%) scale(0);
+             -o-transform: translate(-50%, -50%) scale(0);
+                transform: translate(-50%, -50%) scale(0);
+        -webkit-transition: -webkit-transform 0.2s;
+        transition: -webkit-transform 0.2s;
+        -o-transition: -o-transform 0.2s;
+        -moz-transition: transform 0.2s, -moz-transform 0.2s;
+        transition: transform 0.2s;
+        transition: transform 0.2s, -webkit-transform 0.2s, -moz-transform 0.2s, -o-transform 0.2s; }
+    .form-field--checkbox .checkbox-text {
+      margin-right: 0;
+      width: -webkit-calc(100% - 30px);
+      width: -moz-calc(100% - 30px);
+      width: calc(100% - 30px);
+      font-weight: 600; }
+  .form-field--radio {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+       -moz-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    cursor: pointer; }
+    .form-field--radio input[type="radio"] {
+      position: absolute;
+      overflow: hidden;
+      margin: -1px;
+      width: 1px;
+      height: 1px;
+      clip: rect(0 0 0 0); }
+      .form-field--radio input[type="radio"]:checked + .radio-ic {
+        border-color: #68ac02; }
+        .form-field--radio input[type="radio"]:checked + .radio-ic::before {
+          background-color: #68ac02;
+          -webkit-transform: translate(-50%, -50%) scale(1);
+             -moz-transform: translate(-50%, -50%) scale(1);
+              -ms-transform: translate(-50%, -50%) scale(1);
+               -o-transform: translate(-50%, -50%) scale(1);
+                  transform: translate(-50%, -50%) scale(1);
+          -webkit-transition: background-color 0.3s, -webkit-transform 0.3s;
+          transition: background-color 0.3s, -webkit-transform 0.3s;
+          -o-transition: background-color 0.3s, -o-transform 0.3s;
+          -moz-transition: background-color 0.3s, transform 0.3s, -moz-transform 0.3s;
+          transition: background-color 0.3s, transform 0.3s;
+          transition: background-color 0.3s, transform 0.3s, -webkit-transform 0.3s, -moz-transform 0.3s, -o-transform 0.3s; }
+    .form-field--radio .radio-ic {
+      position: relative;
+      border: 1px solid #d7d7d7;
+      -webkit-border-radius: 50%;
+         -moz-border-radius: 50%;
+              border-radius: 50%;
+      width: 20px;
+      height: 20px; }
+      .form-field--radio .radio-ic::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-border-radius: 50%;
+           -moz-border-radius: 50%;
+                border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        background-color: transparent;
+        -webkit-transform: translate(-50%, -50%) scale(0);
+           -moz-transform: translate(-50%, -50%) scale(0);
+            -ms-transform: translate(-50%, -50%) scale(0);
+             -o-transform: translate(-50%, -50%) scale(0);
+                transform: translate(-50%, -50%) scale(0);
+        -webkit-transition: background-color 0.3s, -webkit-transform 0.3s;
+        transition: background-color 0.3s, -webkit-transform 0.3s;
+        -o-transition: background-color 0.3s, -o-transform 0.3s;
+        -moz-transition: background-color 0.3s, transform 0.3s, -moz-transform 0.3s;
+        transition: background-color 0.3s, transform 0.3s;
+        transition: background-color 0.3s, transform 0.3s, -webkit-transform 0.3s, -moz-transform 0.3s, -o-transform 0.3s; }
+    .form-field--radio .radio-text {
+      margin-right: 0;
+      width: -webkit-calc(100% - 21px);
+      width: -moz-calc(100% - 21px);
+      width: calc(100% - 21px);
+      font-weight: 600; }
+      .form-field--radio .radio-text--accent-inner span {
+        color: #68ac02; }
+  .form-field--gray {
+    color: #bcbcbc; }
+    .form-field--gray strong {
+      color: #333; }
+  .form-field--message {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: column nowrap;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+       -moz-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%; }
+    .form-field--message textarea {
+      width: 100%;
+      height: 55px;
+      resize: none; }
+
+.nice-number {
+  border: 1px solid #68ac02;
+  font-weight: 700;
+  font-size: 18px;
+  background-color: transparent; }
+  .nice-number button {
+    outline: none;
+    border: none;
+    padding: 0 10px;
+    background-color: transparent; }
+  .nice-number input {
+    border: none;
+    background-color: transparent; }
+
 /*# sourceMappingURL=forms.css.map */

@@ -1,9 +1,9 @@
 .hits {
   position: relative;
   padding-bottom: 40px;
-  -webkit-box-shadow: 0 -8px 0 #fff, 0 0 9px rgba(0, 0, 0, 0.2);
-     -moz-box-shadow: 0 -8px 0 #fff, 0 0 9px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 -8px 0 #fff, 0 0 9px rgba(0, 0, 0, 0.2); }
+  -webkit-box-shadow: 0 -8px 0 #fff, 0 0 9px rgba(51, 51, 51, 0.2);
+     -moz-box-shadow: 0 -8px 0 #fff, 0 0 9px rgba(51, 51, 51, 0.2);
+          box-shadow: 0 -8px 0 #fff, 0 0 9px rgba(51, 51, 51, 0.2); }
   .hits__title {
     margin-top: 27px;
     margin-bottom: 3px;
