@@ -28,7 +28,7 @@
 		<link rel="stylesheet" type="text/css" href="./css/social-nav.css">
 		<link rel="stylesheet" type="text/css" href="./css/forms.css">
 		<link rel="stylesheet" type="text/css" href="./css/main-nav.css">
-		<link rel="stylesheet" href="./css/main.css?v=1560336879834">
+		<link rel="stylesheet" href="./css/main.css?v=1560457642868">
 	</head>
 	<body>
 		<header class="main-header">
@@ -63,7 +63,7 @@
 									</svg></a></li>
 						</ul>
 					</nav>
-					<form class="sign-form" action="/"><a class="sign-form__link" href="#">Вход</a><a class="sign-form__link" href="#">Регистрация</a></form>
+					<form class="sign-form" action="/"><a class="sign-form__link show-popup" href="#" data-target="loginPopup">Вход</a><a class="sign-form__link show-popup" href="#" data-target="registerPopup">Регистрация</a></form>
 				</div>
 			</div>
 			<div class="main-header__middle">
@@ -254,9 +254,61 @@
 					<p>РАЗРАБОТКА И ПОДДЕРЖКА <a href="#">smartraf</a></p>
 				</div>
 			</div>
+			<div class="popup popup--login" id="loginPopup">
+				<div class="popup__container"><a class="popup__close" href="#">+</a>
+					<div class="popup__title">
+						<h2>Вход </h2>
+					</div>
+					<div class="form-field">
+						<input type="text" placeholder="Логин или электронная почта" name="login"/>
+					</div>
+					<div class="form-field">
+						<input type="text" placeholder="Пароль" name="pass"/>
+					</div>
+					<button class="btn btn--fill btn--fill-dark btn--fill-dark">Войти на сайт
+					</button>
+					<footer class="popup__footer">
+						<label class="form-field form-field--checkbox">
+							<input type="checkbox" name="remember"/><span class="checkbox-ic">
+								<svg class="checkbox-ic-tick">
+									<use xlink:href="./images/sprites.svg#tick"></use>
+								</svg></span><span class="checkbox-text">Запомнить меня</span>
+						</label><a href="#">Забыли пароль?</a>
+					</footer>
+				</div>
+			</div>
+			<div class="popup popup--login" id="registerPopup">
+				<div class="popup__container"><a class="popup__close" href="#">+</a>
+					<div class="popup__title">
+						<h2>Регистрация</h2>
+					</div>
+					<div class="form-field">
+						<input type="text" placeholder="ФИО*" name="fullName"/>
+					</div>
+					<div class="form-field">
+						<input type="text" placeholder="Е-mail*" name="email"/>
+					</div>
+					<div class="form-field">
+						<input type="text" placeholder="Пароль" name="password"/>
+					</div>
+					<div class="form-field">
+						<input type="text" placeholder="Повторить пароль" name="confirmPassword"/>
+					</div>
+					<button class="btn btn--fill btn--fill-dark btn--fill-dark">Зарегистрироваться
+					</button>
+					<footer class="popup__footer">
+						<label class="form-field form-field--checkbox form-field--align-items-start">
+							<input type="checkbox" name="confirmData"/><span class="checkbox-ic">
+								<svg class="checkbox-ic-tick">
+									<use xlink:href="./images/sprites.svg#tick"></use>
+								</svg></span><span class="checkbox-text">Согласен с условиями обработки персональных данных</span>
+						</label>
+					</footer>
+				</div>
+			</div>
 		</footer>
-		<script src="./js/vendor.js?v=1560336879835"></script>
+		<script src="./js/vendor.js?v=1560457642870"></script>
 		<script src=""></script>
-		<script src="./js/main.js?v=1560336879835"></script>
+		<script src="./js/main.js?v=1560457642870"></script>
 	</body>
 </html>

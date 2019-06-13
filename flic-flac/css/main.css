@@ -2156,6 +2156,64 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
          -o-transform: translateY(-50%) rotate(90deg);
             transform: translateY(-50%) rotate(90deg); }
 
+.lg-outer .lg-item {
+  background: none; }
+
+.lg-actions .lg-prev:after {
+  content: ""; }
+
+.lg-actions .lg-next:before {
+  content: ""; }
+
+.lg-icon {
+  font-family: "Open Sans", -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", sans-serif; }
+
+#lg-download {
+  display: none; }
+
+#lg-counter {
+  display: none; }
+
+.lg-close::after {
+  display: none; }
+
+.lg-toolbar .lg-icon {
+  margin-right: 40px;
+  margin-top: 20px;
+  width: 30px;
+  height: 30px;
+  background-image: url("../images/sprites/svg/close.svg"); }
+
+.lg-backdrop {
+  background-color: rgba(255, 255, 255, 0.73); }
+
+.lg-toolbar {
+  background-color: transparent; }
+
+.lg-prev.lg-icon {
+  background-color: transparent;
+  background-image: url("../images/sprites/svg/arrow_left.svg");
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+     -moz-background-size: contain;
+          background-size: contain;
+  width: 50px;
+  height: 50px; }
+  .lg-prev.lg-icon::after {
+    display: none; }
+
+.lg-next.lg-icon {
+  background-color: transparent;
+  background-image: url("../images/sprites/svg/arrow_right.svg");
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+     -moz-background-size: contain;
+          background-size: contain;
+  width: 50px;
+  height: 50px; }
+  .lg-next.lg-icon::after {
+    display: none; }
+
 *,
 *::before,
 *::after {
@@ -2619,7 +2677,6 @@ a {
     border: 1px solid #d7d7d7;
     padding: 30px 70px;
     width: 420px;
-    height: 290px;
     -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.39);
        -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.39);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.39);
@@ -2651,6 +2708,31 @@ a {
     .popup__title h2 {
       font-weight: 600;
       font-size: 14px; }
+  .popup__footer {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: row nowrap;
+       -moz-box-orient: horizontal;
+       -moz-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+       -moz-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-top: 30px;
+    font-size: 14px; }
+    .popup__footer .form-field--checkbox .checkbox-text {
+      font-weight: 400; }
+  .popup--login .popup__title h2 {
+    font-size: 24px;
+    text-transform: uppercase; }
   .popup.show {
     position: fixed;
     left: 0;
