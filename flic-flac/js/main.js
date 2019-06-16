@@ -185,6 +185,8 @@ if (/Mobi/.test(navigator.userAgent)) {
 }
 
 var $catalogSidebarNavLink = $('.js-sidebar-nav-link');
+var $catalogSidebarShow = $('.js-show-sidebar');
+var $catalogGridShowMore = $('.catalog-grid__show-more');
 $catalogSidebarNavLink.on('click', function (e) {
   var $this = $(e.currentTarget);
   var dropdownMenu = $this.find('.js-sidebar-nav-dropdown');
@@ -199,6 +201,31 @@ $catalogSidebarNavLink.on('click', function (e) {
   } else {
     $this.removeClass('open');
     dropdownMenu.removeClass('open');
+  }
+});
+$catalogSidebarShow.on('click', function (e) {
+  e.preventDefault();
+  var $this = $(e.currentTarget);
+  var showText = $this.data('show-text');
+  var hideText = $this.data('hide-text');
+
+  if (!$this.hasClass('showed')) {
+    $this.addClass('showed');
+    $this.text(hideText);
+    $('.catalog-sidebar').addClass('showed');
+  } else {
+    $this.removeClass('showed');
+    $this.text(showText);
+    $('.catalog-sidebar').removeClass('showed');
+  }
+});
+$catalogGridShowMore.on('click', function (e) {
+  e.preventDefault();
+  var $this = $(e.currentTarget);
+  $this.remove();
+
+  if ($('.catalog-item').hasClass('catalog-item--hidden')) {
+    $('.catalog-item').removeClass('catalog-item--hidden');
   }
 });
 
@@ -532,11 +559,19 @@ if (fivesSliderContainer) {
     perView: 5,
     gap: 16,
     breakpoints: {
+      1200: {
+        perView: 4,
+        gap: 8
+      },
       1024: {
+        perView: 3,
         gap: 8
       },
       768: {
         perView: 3
+      },
+      680: {
+        perView: 2
       },
       600: {
         perView: 1

@@ -190,6 +190,9 @@
             -o-transition: width 0.3s;
             -moz-transition: width 0.3s;
             transition: width 0.3s; } }
+      @media (max-width: 600px) {
+        .contacts-page__social li {
+          font-size: 2.33333vw; } }
     .contacts-page__social svg {
       margin-right: 13px;
       -webkit-border-radius: 50%;
@@ -228,9 +231,25 @@
     .contacts-page-map__info .contacts-list__adress {
       margin-bottom: 15px;
       line-height: 1.3; }
+    @media (max-width: 767px) {
+      .contacts-page-map__info {
+        width: 100%; } }
   .contacts-page-map__box {
     padding-top: 30px;
     width: 585px;
     height: 320px; }
+    @media (max-width: 767px) {
+      .contacts-page-map__box {
+        width: 100%; } }
+  @media (max-width: 767px) {
+    .contacts-page-map {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-flow: column nowrap;
+         -moz-box-orient: vertical;
+         -moz-box-direction: normal;
+          -ms-flex-flow: column nowrap;
+              flex-flow: column nowrap;
+      margin-bottom: 0; } }
 
 /*# sourceMappingURL=contacts.css.map */
