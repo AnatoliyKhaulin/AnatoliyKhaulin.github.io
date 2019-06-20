@@ -105,6 +105,11 @@
         -o-transition: visibility 0.3s, opacity 0.3s, top 0.3s;
         -moz-transition: visibility 0.3s, opacity 0.3s, top 0.3s;
         transition: visibility 0.3s, opacity 0.3s, top 0.3s; } }
+    @media (max-width: 490px) {
+      .main-nav__link.active {
+        color: #186a47; }
+        .main-nav__link.active::after {
+          background-color: #186a47; } }
   .main-nav__dropdown {
     position: absolute;
     left: -22px;

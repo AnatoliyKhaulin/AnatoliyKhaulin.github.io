@@ -24,61 +24,66 @@
   .search-field input[type="search"] {
     display: block;
     margin: 0;
-    border: none;
+    border: 1px solid #d7d7d7;
     -webkit-border-radius: 40px;
        -moz-border-radius: 40px;
             border-radius: 40px;
     padding: 10px 15px;
+    padding-left: 44px;
     max-width: 100%;
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
     font-size: 14px;
-    background-color: #f8f8f8; }
+    background-color: #ebebeb;
+    -webkit-transition: background-color 0.2s;
+    -o-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    transition: background-color 0.2s; }
     .search-field input[type="search"]::-webkit-input-placeholder {
-      padding-left: 29px;
       color: #919090;
       -webkit-transition: color 0.3s;
       -o-transition: color 0.3s;
       -moz-transition: color 0.3s;
       transition: color 0.3s; }
     .search-field input[type="search"]:-moz-placeholder {
-      padding-left: 29px;
       color: #919090;
       -webkit-transition: color 0.3s;
       -o-transition: color 0.3s;
       -moz-transition: color 0.3s;
       transition: color 0.3s; }
     .search-field input[type="search"]::-moz-placeholder {
-      padding-left: 29px;
       color: #919090;
       -webkit-transition: color 0.3s;
       -o-transition: color 0.3s;
       -moz-transition: color 0.3s;
       transition: color 0.3s; }
     .search-field input[type="search"]:-ms-input-placeholder {
-      padding-left: 29px;
       color: #919090;
       -webkit-transition: color 0.3s;
       -o-transition: color 0.3s;
       -moz-transition: color 0.3s;
       transition: color 0.3s; }
     .search-field input[type="search"]::-ms-input-placeholder {
-      padding-left: 29px;
       color: #919090;
       -webkit-transition: color 0.3s;
       -o-transition: color 0.3s;
       -moz-transition: color 0.3s;
       transition: color 0.3s; }
     .search-field input[type="search"]::placeholder {
-      padding-left: 29px;
       color: #919090;
       -webkit-transition: color 0.3s;
       -o-transition: color 0.3s;
       -moz-transition: color 0.3s;
       transition: color 0.3s; }
     .search-field input[type="search"]:focus {
-      outline: none; }
+      outline: none;
+      padding-left: 15px;
+      background-color: #f8f8f8;
+      -webkit-transition: background-color 0.2s;
+      -o-transition: background-color 0.2s;
+      -moz-transition: background-color 0.2s;
+      transition: background-color 0.2s; }
       .search-field input[type="search"]:focus::-webkit-input-placeholder {
         color: transparent;
         -webkit-transition: color 0.3s;
