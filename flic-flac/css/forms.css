@@ -276,9 +276,9 @@
         transition: background-color 0.3s, transform 0.3s, -webkit-transform 0.3s, -moz-transform 0.3s, -o-transform 0.3s; }
     .form-field--radio .radio-text {
       margin-right: 0;
-      width: -webkit-calc(100% - 21px);
-      width: -moz-calc(100% - 21px);
-      width: calc(100% - 21px);
+      width: -webkit-calc(100% - 25px);
+      width: -moz-calc(100% - 25px);
+      width: calc(100% - 25px);
       font-weight: 600; }
       .form-field--radio .radio-text--accent-inner span {
         color: #68ac02; }

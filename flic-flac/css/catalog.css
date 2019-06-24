@@ -585,9 +585,9 @@
     color: #d7d7d7; }
     @media (min-width: 1025px) {
       .catalog-grid__show-more.btn--border:hover, .catalog-grid__show-more.btn--border:focus {
-        border-color: #d7d7d7;
+        border-color: #186a47;
         color: #fff;
-        background-color: #d7d7d7; } }
+        background-color: #186a47; } }
   @media (max-width: 768px) {
     .catalog-grid {
       width: 100%; } }

@@ -596,20 +596,11 @@ var headerTopContainer = document.querySelector('.main-header__top .container');
 var menuBtn = document.querySelector('.js-burger-btn');
 var menuBurger = menuBtn.querySelector('.main-header__burger');
 var topHeaderNavList = document.querySelector('.js-top-header-nav-list');
-var contactsShowBtn = document.querySelector('.js-contacts-show');
-var contactsHiddenMobile = document.querySelector('.header-contacts');
-var headerSocialLinks = document.querySelector('.main-header .social-nav');
-var headerLogo = document.querySelector('.header-logo');
 var signForm = document.querySelector('.sign-form');
-
-function insertAfter(elementInstertAfter, parentElement) {
-  return parentElement.parentNode.insertBefore(elementInstertAfter, parentElement.nextSibling);
-}
 
 if (window.innerWidth < 1024) {
   headerBottomLine.appendChild(headerTopLine);
   topHeaderNavList.prepend(signForm);
-  insertAfter(headerSocialLinks, headerLogo);
   menuBtn.addEventListener('click', function () {
     if (menuBurger.classList.contains('active')) {
       menuBurger.classList.remove('active');
@@ -617,17 +608,6 @@ if (window.innerWidth < 1024) {
     } else {
       menuBurger.classList.add('active');
       topHeaderNavList.classList.add('active');
-    }
-  });
-  contactsShowBtn.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    if (contactsShowBtn.classList.contains('active')) {
-      contactsShowBtn.classList.remove('active');
-      contactsHiddenMobile.classList.remove('active');
-    } else {
-      contactsShowBtn.classList.add('active');
-      contactsHiddenMobile.classList.add('active');
     }
   });
   $(document).ready(function () {
