@@ -669,10 +669,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _popup__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_popup__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var jquery_nice_number_src_jquery_nice_number__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! jquery.nice-number/src/jquery.nice-number */ "./node_modules/jquery.nice-number/src/jquery.nice-number.js");
 /* harmony import */ var jquery_nice_number_src_jquery_nice_number__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(jquery_nice_number_src_jquery_nice_number__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _contacts_map__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./contacts-map */ "./src/js/contacts-map.js");
-/* harmony import */ var _contacts_map__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_contacts_map__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var jquery_custom_select__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! jquery-custom-select */ "./node_modules/jquery-custom-select/jquery.custom-select.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _contacts_map__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./contacts-map */ "./src/js/contacts-map.js");
+/* harmony import */ var _contacts_map__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_contacts_map__WEBPACK_IMPORTED_MODULE_12__);
 
 
 
@@ -684,8 +685,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-jquery__WEBPACK_IMPORTED_MODULE_10___default()('input[type="number"]').niceNumber();
 
+jquery__WEBPACK_IMPORTED_MODULE_11___default()('input[type="number"]').niceNumber();
+
+jquery__WEBPACK_IMPORTED_MODULE_11___default()('select').customSelect({
+  includeValue: true,
+  transition: 100
+});
 
 /***/ }),
 
@@ -826,10 +832,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var svg4everybody__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(svg4everybody__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var jquery_custom_select__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! jquery-custom-select */ "./node_modules/jquery-custom-select/jquery.custom-select.js");
-/* harmony import */ var lightgallery_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! lightgallery.js */ "./node_modules/lightgallery.js/lib/js/lightgallery.js");
-/* harmony import */ var lightgallery_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(lightgallery_js__WEBPACK_IMPORTED_MODULE_5__);
-
+/* harmony import */ var lightgallery_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lightgallery.js */ "./node_modules/lightgallery.js/lib/js/lightgallery.js");
+/* harmony import */ var lightgallery_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lightgallery_js__WEBPACK_IMPORTED_MODULE_4__);
 
 
 
@@ -870,10 +874,6 @@ try {
   }
 }
 
-jquery__WEBPACK_IMPORTED_MODULE_3___default()('select').customSelect({
-  includeValue: true,
-  transition: 100
-});
 var lightGalleryItems = document.querySelectorAll('.lightgallery');
 lightGalleryItems.forEach(function (item, index) {
   lightGallery(item);
