@@ -10,7 +10,7 @@
 		<meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:title" content="СТО - Немцев">
 		<title>СТО - Немцев</title>
-		<link rel="stylesheet" href="./css/main.css?v=1574220355418">
+		<link rel="stylesheet" href="./css/main.css?v=1575285861837">
 	</head>
 	<body>
 		<header class="main-header">
@@ -43,7 +43,7 @@
 						</p>
 					</div>
 					<div class="main-header-callback"><a href="tel:+7 (812) 933 77 80">+7 (812) 933 77 80</a>
-						<button class="btn" type="button">Заказать звонок</button>
+						<button class="btn" type="button" id="js-callback-modal">Заказать звонок</button>
 					</div>
 				</div>
 			</div>
@@ -86,7 +86,7 @@
 					<div class="section-title">
 						<h2 class="section-title__title">Диагностика двигателя</h2>
 					</div>
-					<p class="service__description">Диагностика двигателя Фольксваген, Ауди, Шкода, Сеат. Главной целью диагностики двигателя является обнаружение его неисправностей и их оперативное устранение. Это возможно только при наличии оборудования и людей, которые знают, что делают. Обратившись за помощью на нашу СТО, вы убедитесь, что цена на диагностику двигателя в СПБ может быть приемлемой, и это при высоком уровне качества.</p>
+					<p class="service__subtitle">Диагностика двигателя Фольксваген, Ауди, Шкода, Сеат. Главной целью диагностики двигателя является обнаружение его неисправностей и их оперативное устранение. Это возможно только при наличии оборудования и людей, которые знают, что делают. Обратившись за помощью на нашу СТО, вы убедитесь, что цена на диагностику двигателя в СПБ может быть приемлемой, и это при высоком уровне качества.</p>
 					<figure class="service__figure"><img src="./images/service_img.jpg" alt="">
 						<figcaption>
 							<h5>Какие проблемы вам нужно решить?</h5>
@@ -144,6 +144,166 @@
 						</div>
 						<footer class="main-callback__footer">При нажатии на кнопку «Записаться» вы соглашаетесь с <a href="#">политикой конфиденциальности</a>.</footer>
 					</form>
+					<div class="service-description">
+						<div class="service-description__gallery">
+							<div class="service-description__pic"><img src="./images/service_img_1.jpg" alt=""></div>
+							<div class="service-description__pic"><img src="./images/service_img_2.jpg" alt=""></div>
+							<div class="service-description__pic"><img src="./images/service_img_3.jpg" alt=""></div>
+							<div class="service-description__pic"><img src="./images/service_img_4.jpg" alt=""></div>
+						</div>
+						<div class="service-description__text">
+							<h5>Когда необходима диагностика двигателя?</h5>
+							<p>Диагностика двигателя требуется не только в том случае, если вы выявили или подозреваете его поломку. Она должна проводиться регулярно. Это касается и дорогостоящих автомобилей, ведь, несмотря на стоимость, и они нуждаются в контроле всех систем.</p>
+							<p><strong>Гарантией бесперебойной работы двигателя в течение длительного периода времени помимо компьютерной диагностики двигателя является соблюдение следующих правил:</strong></p>
+							<ul class="styled-list">
+								<li>Использование качественного масла – желательно, от производителя с мировым именем;</li>
+								<li>Регулярная замена масла и масляных фильтров;</li>
+								<li>Установка оригинальных или хотя бы проверенных комплектующих.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="service-row">
+						<article class="service-article">
+							<h5>Способы диагностики двигателя</h5>
+							<p>Диагностика двигателя осуществляется несколькими способами, каждый из которых подходит для конкретного случая. Самым простым и, как следствие, быстрым из них визуальный.</p>
+						</article>
+						<article class="service-article">
+							<h5>Виды диагностики двигателя:</h5>
+							<ul class="styled-list">
+								<li>Визуальная диагностика узлов и агрегатов двигателя</li>
+								<li>Компьютерная диагностика двигателя , а  также других узлов и агрегатов</li>
+								<li>Инструментальная диагностика двигателя</li>
+								<li>Высокоточная диагностика мотор-тестером</li>
+							</ul>
+						</article>
+					</div>
+					<div class="service-result">
+						<h5>Результат</h5>
+						<ul class="styled-list styled-list--ok">
+							<li>Более ровная работа двигателя, и более ровная работа двигателя</li>
+							<li>Более ровная работа двигателя</li>
+						</ul>
+						<ul class="styled-list styled-list--ok">
+							<li>Более ровная работа двигателя</li>
+							<li>Более ровная работа двигателя</li>
+						</ul>
+						<ul class="styled-list styled-list--ok">
+							<li>Более ровная работа двигателя</li>
+							<li>Более ровная работа двигателя, и более ровная работа двигателя</li>
+						</ul>
+					</div>
+					<form class="main-callback main-callback--inverse" action="/" method="POST">
+						<h4 class="main-callback__title">Остались вопросы? Мы свяжемся с вами</h4>
+						<p class="main-callback__subtitle">Закажите бесплатную консультацию. Мы ответим на все ваши вопросы!</p>
+						<div class="main-callback__fields">
+							<label class="field">
+								<input class="field__input" type="text" placeholder="Ваше имя"/>
+							</label>
+							<label class="field">
+								<input class="field__input" type="tel" placeholder="Номер телефона"/>
+							</label>
+							<button class="btn" type="submit">Записаться</button>
+						</div>
+						<footer class="main-callback__footer">При нажатии на кнопку «Записаться» вы соглашаетесь с <a href="#">политикой конфиденциальности</a>.</footer>
+					</form>
+					<footer class="service-footer">
+						<h4>Стоимость диагностики дигателя</h4>
+						<table class="service-table">
+							<thead>
+								<tr>
+									<th>Рабочая операция</th>
+									<th colspan="2">Стоимость <br> <small>(без учета з/с и расход. мат-лов)</small></th>
+									<th>Заказать</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Ремонт двигателя</strong></td>
+									<td><strong><small>Легковые <br> /внедорожники</small></strong></td>
+									<td><strong></strong><small>Микроавтобусы</small></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Двигатель (снять/поставить)</td>
+									<td>от 8 000 руб.</td>
+									<td>от 8 000 руб.</td>
+									<td><a href="#">Заказать</a></td>
+								</tr>
+								<tr>
+									<td>Двигатель (Разборка/сборка)</td>
+									<td>от 18 000 руб.</td>
+									<td>от 18 000 руб.</td>
+									<td><a href="#">Заказать</a></td>
+								</tr>
+								<tr>
+									<td>Двигатель снят/разобран (мойка аппаратная) 1 цикл</td>
+									<td>от 500 руб.</td>
+									<td>от 500 руб.</td>
+									<td><a href="#">Заказать</a></td>
+								</tr>
+								<tr>
+									<td>Ремонт двигателя - легковые/внедорожник/микроавтобусы</td>
+									<td>от 8 000 руб.</td>
+									<td>от 8 000 руб.</td>
+									<td><a href="#">Заказать</a></td>
+								</tr>
+								<tr>
+									<td>Двигатель (снять/поставить)</td>
+									<td>от 18 000 руб.</td>
+									<td>от 18 000 руб.</td>
+									<td><a href="#">Заказать</a></td>
+								</tr>
+								<tr>
+									<td>Двигатель (снять/поставить)</td>
+									<td>от 8 000 руб.</td>
+									<td>от 8 000 руб.</td>
+									<td><a href="#">Заказать</a></td>
+								</tr>
+								<tr>
+									<td>Двигатель (Разборка/сборка)</td>
+									<td>от 18 000 руб.</td>
+									<td>от 18 000 руб.</td>
+									<td><a href="#">Заказать</a></td>
+								</tr>
+								<tr>
+									<td>Двигатель снят/разобран (мойка аппаратная) 1 цикл</td>
+									<td>от 500 руб.</td>
+									<td>от 500 руб.</td>
+									<td><a href="#">Заказать</a></td>
+								</tr>
+								<tr>
+									<td>Ремонт двигателя - легковые/внедорожник/микроавтобусы</td>
+									<td>от 8 000 руб.</td>
+									<td>от 8 000 руб.</td>
+									<td><a href="#">Заказать</a></td>
+								</tr>
+								<tr>
+									<td>Двигатель (снять/поставить)</td>
+									<td>от 18 000 руб.</td>
+									<td>от 18 000 руб.</td>
+									<td><a href="#">Заказать</a></td>
+								</tr>
+								<tr>
+									<td>Двигатель снят/разобран (мойка аппаратная) 1 цикл</td>
+									<td>от 500 руб.</td>
+									<td>от 500 руб.</td>
+									<td><a href="#">Заказать</a></td>
+								</tr>
+								<tr>
+									<td>Ремонт двигателя - легковые/внедорожник/микроавтобусы</td>
+									<td>от 8 000 руб.</td>
+									<td>от 8 000 руб.</td>
+									<td><a href="#">Заказать</a></td>
+								</tr>
+								<tr>
+									<td>Двигатель (снять/поставить)</td>
+									<td>от 18 000 руб.</td>
+									<td>от 18 000 руб.</td>
+									<td><a href="#">Заказать</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</footer>
 				</div>
 			</section>
 		</main>
@@ -200,8 +360,51 @@
 				</div>
 			</div>
 		</footer>
-		<script src="./js/vendor.js?v=1574220355419"></script>
+		<div class="modal" id="js-modal-wrapper">
+			<form class="modal__container" action="/" method="POST">
+				<h5 class="modal__title">Заказать звонок</h5>
+				<label class="field">
+					<input class="field__input" type="text" placeholder="Ваше имя"/>
+				</label>
+				<label class="field">
+					<input class="field__input" type="tel" placeholder="Номер телефона"/>
+				</label>
+				<button class="btn" type="submit">Заказать</button>
+				<footer class="modal__footer">При нажатии на кнопку «Отправить» вы соглашаетесь с <a href="#">политикой конфиденциальности.</a></footer>
+			</form>
+		</div>
+		<div class="modal modal--thx" id="js-modal-thx">
+			<form class="modal__container" action="/" method="POST">
+				<h5 class="modal__title">Спасибо за ваше обращение</h5>
+				<button class="btn" type="button">Ок</button>
+			</form>
+		</div>
+		<div class="modal modal--review" id="js-modal-review">
+			<form class="modal__container" action="/" method="POST">
+				<h5 class="modal__title">Оставить отзыв</h5>
+				<div class="modal__inner">
+					<div class="modal__col modal__col--left">
+						<label class="field">
+							<input class="field__input" type="text" placeholder="Ваше имя"/>
+						</label>
+						<label class="field">
+							<input class="field__input" type="tel" placeholder="Номер телефона"/>
+						</label>
+						<label class="field">
+							<input class="field__input" type="text" placeholder="Марка авто"/>
+						</label>
+					</div>
+					<div class="modal__col modal__col--right">
+						<textarea class="field__input" type="textarea" placeholder="Напишите свой отзыв"></textarea>
+					</div>
+				</div>
+				<footer class="modal__footer"><span>При нажатии на кнопку «Отправить» вы соглашаетесь с <a href="#">политикой конфиденциальности.</a></span>
+					<button class="btn" type="submit">Отправить</button>
+				</footer>
+			</form>
+		</div>
+		<script src="./js/vendor.js?v=1575285861838"></script>
 		<script>VK.Widgets.Group("vkWidget", {mode: 1, width: "100%", height: "100%"}, 20003922);</script>
-		<script src="./js/main.js?v=1574220355419"></script>
+		<script src="./js/main.js?v=1575285861838"></script>
 	</body>
 </html>
